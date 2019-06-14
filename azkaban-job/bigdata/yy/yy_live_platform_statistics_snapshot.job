@@ -1,0 +1,6 @@
+type=javaprocess
+java.class=com.haima.sage.bigdata.azkaban.Application
+failure.emails=liguangbao@haima.me
+classpath=/data/service/azkaban-3.38.0/azkaban-exec-server-0.1.0-SNAPSHOT/lib/sage-bigdata-azkaban-framework.jar
+main.args=bigdata/YY 05_yy_live_platform_statistics_snapshot.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}
+dependencies=yy_live_user_payer_info_snapshot

@@ -1,0 +1,1 @@
+{"id":"f283fb59-272b-490e-929b-c5c9acc7d81e","name":"食药监-美团ocr中间表ES","data":{"cluster":"NX_ES","hostPorts":[["MVP-HADOOP40",9200]],"index":"tbl_es_takeout_ocr_picture","esType":"data","field":"@timestamp","start":"1","step":1000,"size":1000,"name":"es6"},"collector":"bigdata-dev05","isSample":0}

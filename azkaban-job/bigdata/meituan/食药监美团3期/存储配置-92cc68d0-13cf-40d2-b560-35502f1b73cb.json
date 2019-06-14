@@ -1,0 +1,1 @@
+{"id":"92cc68d0-13cf-40d2-b560-35502f1b73cb","name":"食药监-美团商家数据到ES","writeType":"es6","data":{"cluster":"NX_ES","hostPorts":[["MVP-HADOOP40",9200]],"index":"tbl_es_takeout_shop_infoP3","idFields":"shop_id","number_of_shards":1,"number_of_replicas":1,"numeric_detection":false,"date_detection":false,"enable_size":false,"name":"es6","cache":1000},"isSample":0}

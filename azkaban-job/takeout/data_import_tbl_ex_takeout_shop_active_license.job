@@ -1,0 +1,6 @@
+type=javaprocess
+java.class=com.haima.sage.bigdata.azkaban.Application
+failure.emails=bigdata@haima.me
+classpath=/data/service/azkaban-3.38.0/azkaban-exec-server-0.1.0-SNAPSHOT/lib/sage-bigdata-azkaban-framework.jar
+main.args=takeout data_import_tbl_ex_takeout_shop_active_license.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}
+dependencies=data_import_tbl_ex_takeout_new_shop

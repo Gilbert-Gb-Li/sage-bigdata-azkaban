@@ -1,0 +1,1 @@
+{"id":"ec97880e-9e3f-4f1c-ba77-a58b5fc010ad","name":"食药监3.0-美团-ES宽表","data":{"cluster":"my_es_cluster","hostPorts":[["bigdata-dev06",9200],["bigdata-dev07",9200],["bigdata-dev08",9200]],"index":"tbl_es_takeout_shop_infoP3","esType":"data","field":"c@receive_time","start":"1","step":300000,"size":10000,"name":"es6"},"collector":"bigdata-dev05","isSample":0}

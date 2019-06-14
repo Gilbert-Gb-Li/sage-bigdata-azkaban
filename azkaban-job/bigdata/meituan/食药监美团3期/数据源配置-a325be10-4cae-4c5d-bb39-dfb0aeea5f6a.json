@@ -1,0 +1,1 @@
+{"id":"a325be10-4cae-4c5d-bb39-dfb0aeea5f6a","name":"食药监-美团ocr返回数据源","data":{"hostPorts":"172.16.208.67:6668,172.16.208.68:6668","topic":"ocr-return-data","codec":{"name":"line"},"wildcard":"false","position":"END","properties":{"connectTimeout":"300"},"name":"kafka"},"collector":"bigdata-dev05","isSample":0}

@@ -1,0 +1,3 @@
+type=command
+failure.emails=liguangbao@haima.me
+command=sh /data/service/azkaban-3.38.0/azkaban-script/bigdata/bili/01.bili_live_gift_info_snapshot.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}

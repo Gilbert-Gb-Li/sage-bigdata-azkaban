@@ -1,0 +1,102 @@
+1.  protobuffer上报数据完整示例
+{
+    containerId: "666666-666666"
+    cloudServiceId: "666666"
+    taskId: "1"
+    extraData: "{\"resourceKey\":\"12222222\"}"
+    taskType: "INFO_USER"
+    appId: "com.yixia.videoeditor v7.2.0"
+    crawlData {
+        dataSource: "app"
+        spiderVersion: "3.5.0"
+        containerId: "666666-666666"
+        cloudServiceId: "666666"
+        resourceKey: "12222222"
+        dataType: 1
+        appPackageName: "com.yixia.videoeditore"
+        appVersion: "v7.2.0"
+        schema: "short-video-user"
+        content {
+            timestamp: 1545192220920
+            data: "\037\213\b\000\000\000\000\000\000\000\213\256VJ\251\314K\314\315L\216O\316/\315+Q\262Rz\332\265\342YC\243\222\216RqF~QI|YfJj>\\\362\311\3369O\'\203$s2\263S\321\344\236N\233\363l\315\"\240\\JbIb|zj^jQbIj|Ifn\252\222\225\241\251\211\251\241\245\221\221\241\241\241\205Ym,\000\345z\271vx\000\000\000"
+        }
+        content { ......}
+    }
+}
+ 
+以上data数据为编码后的，头部数据都是一样的，以下数据只提供data的数据示例
+
+2.  短视频用户数据 
+请求参数，模板类型是1，即data_type=1 对应schema：short-video-user
+[{
+    "user_id": "用户id",
+    "user_icon": "用户头像url",
+    "user_nickname": "用户昵称",
+    "following_count": "用户关注数量",
+    "follower_count": "粉丝数量",
+    "short_video_count": "短视频数量"
+}]
+
+3.  短视频视频数据
+请求参数，模板类型是2，即data_type=2 对应schema：short-video-data
+[
+ {
+    "short_video_id": "短视频ID",
+    "short_video_name": "作品标题",
+    "play_url_list": "作品链接(可能是多个url的集合)["",""]",
+    "short_video_type": "内容类型",
+    "author_id": "作者id",
+    "avatar_nickname": "作者昵称",
+	"video_create_time": "作品创建时间"
+ },
+  {
+    "short_video_id": "短视频ID",
+    "short_video_name": "作品标题",
+    "play_url_list": "作品链接(可能是多个url的集合)["",""]",
+    "short_video_type": "内容类型",
+    "author_id": "作者id",
+    "avatar_nickname": "作者昵称",
+	"video_create_time": "作品创建时间"
+ },
+ {......}
+]
+
+4.  短视频评论数据
+请求参数，模板类型是3，即data_type=3 对应schema：short-video-comment
+[
+  {
+    "short_video_id": "短视频ID",
+    "user_id": "评论用户id",
+    "user_nickname": "评论用户昵称",
+    "comment": "评论内容",
+    "comment_created_time": "评论创建时间"
+ },
+  {
+    "short_video_id": "短视频ID",
+    "user_id": "评论用户id",
+    "user_nickname": "评论用户昵称",
+    "comment": "评论内容",
+    "comment_created_time": "评论创建时间"
+ },
+ {.......}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

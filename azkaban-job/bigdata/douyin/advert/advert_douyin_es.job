@@ -1,0 +1,6 @@
+type=javaprocess
+java.class=com.haima.sage.bigdata.azkaban.Application
+failure.emails=deepinsight@haima.me
+classpath=/data/service/azkaban-3.38.0/azkaban-exec-server-0.1.0-SNAPSHOT/lib/sage-bigdata-azkaban-framework.jar
+main.args=bigdata/douyin/advert advert_douyin_cala_date_es.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}
+dependencies=advert_douyin_content_calc_es,douyin_advert_kol_calc_es,advert_douyin_industrybrand_calc_es,advert_douyin_challenge_calc_es,advert_douyin_industrycategory_calc_es,advert_douyin_industrybrand_personas_act_es,advert_douyin_industrybrand_personas_age_es,advert_douyin_industrybrand_personas_area_es,advert_douyin_industrybrand_personas_gender_es,advert_douyin_industrybrand_personas_interest_es

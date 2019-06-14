@@ -1,0 +1,18 @@
+type=javaprocess
+java.class=com.haima.sage.bigdata.azkaban.Application
+
+#宁夏环境
+failure.emails=deepinsight@haima.me
+#开发环境
+#failure.emails=caoshengwen@haima.me
+#测试环境
+#failure.emails=shaolimin@haima.me
+
+#宁夏环境
+classpath=/data/service/azkaban-3.38.0/azkaban-exec-server-0.1.0-SNAPSHOT/lib/sage-bigdata-azkaban-framework.jar
+#开发环境
+#classpath=/data/service/azkaban-3.38.0/azkaban-exec-server-0.1.0-SNAPSHOT/lib/sage-bigdata-azkaban-framework.jar
+
+main.args=live_p3/day data_import_tbl_ex_live_gift_data_daily_snapshot.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}
+
+dependencies=data_import_ingkee_live_p3_origin_orc

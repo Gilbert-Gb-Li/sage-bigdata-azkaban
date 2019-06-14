@@ -1,0 +1,6 @@
+type=javaprocess
+java.class=com.haima.sage.bigdata.azkaban.Application
+failure.emails=deepinsight@haima.me
+classpath=/data/service/azkaban-3.38.0/azkaban-exec-server-0.1.0-SNAPSHOT/lib/sage-bigdata-azkaban-framework.jar
+main.args=bigdata/tmall/finance data_import_tmall_boyu_goods_new_snapshot.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}
+dependencies=data_import_tmall_boyu_goods_all_snapshot

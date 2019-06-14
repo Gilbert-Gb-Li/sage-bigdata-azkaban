@@ -1,0 +1,1 @@
+{"id":"1c41f1e6-fb6f-4322-9de4-a5cabb8e43de","name":"食药监-美团商家评价数据到ES","writeType":"es6","data":{"cluster":"NX_ES","hostPorts":[["MVP-HADOOP40",9200]],"index":"tbl_es_takeout_shop_comment_detailP3","idFields":"shop_id","number_of_shards":5,"number_of_replicas":1,"numeric_detection":false,"date_detection":false,"enable_size":false,"name":"es6","cache":1000},"isSample":0}

@@ -1,0 +1,1 @@
+{"id":"3d774119-1d77-4608-813e-e65b17c4cba1","name":"食药监-ocr中间表解析","sample":"","parser":{"filter":[{"fields":["company_address","company_name","last_check_grade","local_logo","check_date","business_scope","company_owner","expire_time","business_type","place_grade","license_num","manage_grade"],"name":"removeFields"}],"metadata":[],"name":"nothing"},"properties":[],"isSample":0}

@@ -1,0 +1,10 @@
+"app_id":5,   应用ID
+"app_pkg":"cn.lanpaopao888.live", 应用包名
+"fid":"4788635701454911055",  房间号
+"start_time":1551852202723,  上报时间
+"stream_url":"http://172.16.50.233/play/zhifu_10s.mp4", 视频流
+"tenant_id":"1", 租户ID
+"uid":"1169502261315642415", 用户ID
+"user_id":"1169502261315642415",
+"user_name":"陶乐", 用户名称
+"video_type":"1" 内容类型(app类型) 0 直播 ，1点播

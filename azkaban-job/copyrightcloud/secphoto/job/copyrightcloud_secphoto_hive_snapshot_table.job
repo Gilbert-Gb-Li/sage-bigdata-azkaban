@@ -1,0 +1,5 @@
+type=javaprocess
+java.class=com.haima.sage.bigdata.azkaban.Application
+failure.emails=renguangtao@haima.me
+classpath=/data/service/azkaban-exec-server/lib/sage-bigdata-azkaban-framework.jar
+main.args=copyrightcloud/secphoto copyrightcloud_secphoto_hive_snapshot_table.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}

@@ -1,0 +1,11 @@
+#!/bin/sh
+source /etc/profile
+source ${AZKABAN_HOME}/conf/env.conf
+source ${base_path}/util.sh
+
+date=$1
+yesterday=`date -d "-1 day $date" +%Y-%m-%d`
+
+hive_sql="INSERT INTO bigdata.uxin_car_info_snapshot partition(dt='$date') select occur_timestamp,car_id,price,car_name,brand,mode,year,gear_box,version,down_payment,month_payment,nationwide_purchase, special_offer,return_car_3_days,certificate,warehouse,registration_date,apparent_mileage,emission_standards,car_color, engine_intake,lift_time_min,lift_time_max,engine_exhaust,check_people,check_date,last_maintenance_date,fix_times,maintenance_times, accident_times,share_link, param_timestamp, car_door_count, car_seat_count, car_type, car_sub_type from( select *,row_number() over (partition by car_id order by occur_timestamp desc) as order_num from ( SELECT t1.occur_timestamp,t1.car_id,t1.price,t1.car_name,t1.brand,t1.mode,t1.year,t1.gear_box,t1.version,t1.down_payment,t1.month_payment,t1.nationwide_purchase,t1.special_offer,t1.return_car_3_days,t1.certificate,t1.warehouse,t1.registration_date,t1.apparent_mileage,t1.emission_standards,t1.car_color,t1.engine_intake,t1.lift_time_min,t1.lift_time_max,t1.engine_exhaust,t1.check_people,t1.check_date,t1.last_maintenance_date,t1.fix_times,t1.maintenance_times,t1.accident_times,t1.share_link, t2.occur_timestamp as param_timestamp, t2.car_door_count, t2.car_seat_count, t2.car_type, t2.car_sub_type FROM (select * from bigdata.uxin_car_info_origin where dt='$date' and price is not null and car_id is not null) t1 left JOIN (select * from bigdata.uxin_car_parameter_snapshot where dt='$date' and (car_door_count is not null and car_seat_count is not null and car_type is not null)) t2 ON (t1.car_id = t2.car_id) union all select occur_timestamp,car_id,price,car_name,brand,mode,year,gear_box,version,down_payment,month_payment,nationwide_purchase,special_offer,return_car_3_days,certificate,warehouse,registration_date,apparent_mileage,emission_standards,car_color,engine_intake,lift_time_min,lift_time_max,engine_exhaust,check_people,check_date,last_maintenance_date,fix_times,maintenance_times,accident_times,share_link, param_timestamp, car_door_count, car_seat_count, car_type, car_sub_type from bigdata.uxin_car_info_snapshot where (dt='$yesterday')) dd1 ) dd2 where dd2.order_num =1;"
+
+executeHiveCommand "${hive_sql}"

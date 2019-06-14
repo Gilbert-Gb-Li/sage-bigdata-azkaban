@@ -1,0 +1,3 @@
+type=command
+failure.emails=liguangbao@haima.me
+command=sh bili_live_add_partitions.sh ${azkaban.flow.start.year}-${azkaban.flow.start.month}-${azkaban.flow.start.day} ${azkaban.flow.start.hour}
